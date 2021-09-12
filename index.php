@@ -1,3 +1,17 @@
+<?php
+include("includes/config.php");
+
+// session_destroy();
+// use this to log out manually.
+
+if(isset($_SESSION['userLoggedIn'])) {
+    $userLoggedIn = $_SESSION['userLoggedIn'];
+
+} else {
+    header("Location: register.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
